@@ -531,6 +531,116 @@ footer {
         width: 100%; /* Bottoni estesi per una migliore usabilità su mobile */
     }
 }
+/* Stili generali per desktop */
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #5c5852;
+    border-radius: 15px;
+    padding: 15px;
+    width: 300px;
+    max-width: 100%;
+    text-align: center;
+    background-color: #141E30;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-info {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.product-info p {
+    font-weight: bold;
+    color: #c7f089;
+}
+
+/* Bottone posizionato in basso e centrato */
+.button {
+    background-color: #c7f089;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: auto;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #5c5852;
+    transform: scale(1.05);
+}
+
+/* Ottimizzazione della griglia dei prodotti */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* ===================== Stili per Mobile ===================== */
+@media (max-width: 768px) {
+    /* Adattamento per tablet e telefoni */
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%; /* Adattamento delle card al 90% della larghezza dello schermo */
+    }
+
+    .button {
+        width: 100%; /* Estensione dei bottoni su tutta la larghezza */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Stili specifici per telefoni */
+    .product-grid {
+        flex-direction: column;
+        gap: 15px; /* Riduzione dello spazio tra i prodotti */
+    }
+
+    .product {
+        width: 100%; /* Adattamento al 100% della larghezza per telefoni */
+        padding: 10px; /* Riduzione del padding per schermi piccoli */
+    }
+
+    .product img {
+        max-width: 100%; /* Assicura che l'immagine si ridimensioni correttamente */
+        height: auto;
+    }
+
+    .product-info p {
+        font-size: 1.1rem; /* Riduzione della dimensione del testo per adattarsi a schermi piccoli */
+    }
+
+    .button {
+        width: 100%; /* I bottoni ora coprono l'intera larghezza su mobile */
+        padding: 12px 0; /* Aumento dell'altezza del bottone per migliorare la toccabilità */
+        font-size: 1rem; /* Testo leggermente più grande per accessibilità */
+    }
+}
+
 
 
 
