@@ -640,6 +640,61 @@ footer {
         font-size: 1rem; /* Testo leggermente più grande per accessibilità */
     }
 }
+/* Nasconde il menu su schermi grandi */
+.hamburger-menu {
+    display: none;
+}
+
+/* Stile per dispositivi mobili */
+@media (max-width: 768px) {
+    /* Mostra il menu solo su schermi piccoli */
+    .hamburger-menu {
+        display: block;
+        position: relative;
+    }
+
+    /* Stile per l'icona del menu (hamburger) */
+    .menu-icon {
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    /* Stile per il menu nascosto */
+    .mobile-nav {
+        display: none;
+        background-color: #f3f3f3;
+        padding: 10px;
+    }
+
+    /* Stile per i pulsanti nel menu */
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .mobile-nav ul li {
+        margin: 10px 0;
+    }
+
+    .mobile-nav ul li a {
+        text-decoration: none;
+        font-size: 18px;
+        color: #333;
+        display: block;
+        padding: 10px;
+        background-color: #ddd;
+        border-radius: 5px;
+    }
+
+    /* Mostra il menu quando l'icona viene cliccata */
+    #menu-toggle:checked + .menu-icon + .mobile-nav {
+        display: block;
+    }
+}
+
 
 
 
