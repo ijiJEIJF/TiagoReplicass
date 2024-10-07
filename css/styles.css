@@ -166,9 +166,9 @@ section {
 }
 
 .product p {
-    margin: 5px 0;
     font-weight: bold;
     color: #c7f089;
+    margin: 5px 0;
 }
 
 .button {
@@ -640,17 +640,22 @@ footer {
         font-size: 1rem; /* Testo leggermente più grande per accessibilità */
     }
 }
-/* Nasconde il menu su schermi grandi */
+/* Nascondi il menu hamburger su desktop */
 .hamburger-menu {
     display: none;
 }
 
-/* Stile per dispositivi mobili */
+/* Mostra il menu hamburger e nasconde i bottoni normali su mobile */
 @media (max-width: 768px) {
-    /* Mostra il menu solo su schermi piccoli */
+    /* Mostra il menu hamburger */
     .hamburger-menu {
         display: block;
         position: relative;
+    }
+
+    /* Nascondi i pulsanti classici */
+    .desktop-buttons {
+        display: none;
     }
 
     /* Stile per l'icona del menu (hamburger) */
@@ -669,7 +674,7 @@ footer {
         padding: 10px;
     }
 
-    /* Stile per i pulsanti nel menu */
+    /* Stile per i pulsanti del menu hamburger */
     .mobile-nav ul {
         list-style: none;
         padding: 0;
@@ -689,12 +694,64 @@ footer {
         border-radius: 5px;
     }
 
-    /* Mostra il menu quando l'icona viene cliccata */
+    /* Mostra il menu quando l'icona hamburger è cliccata */
     #menu-toggle:checked + .menu-icon + .mobile-nav {
         display: block;
     }
 }
 
+/* Su schermi più grandi (desktop) */
+@media (min-width: 769px) {
+    /* Nascondi l'hamburger menu su schermi grandi */
+    .hamburger-menu {
+        display: none;
+    }
+
+    /* Mostra i pulsanti classici su desktop */
+    .desktop-buttons {
+        display: block;
+    }
+
+    .desktop-buttons a {
+        display: inline-block;
+        margin: 5px 10px;
+        padding: 10px 15px;
+        background-color: #ddd;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #333;
+    }
+}
+/* Stile per l'immagine dell'header */
+.header-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-image img {
+    max-width: 150px; /* Dimensiona l'immagine */
+    height: auto;
+}
+
+/* Stile per il pulsante sotto il titolo */
+.cta-button {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.shop-button {
+    padding: 10px 20px;
+    background-color: #f4a261;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.shop-button:hover {
+    background-color: #e76f51;
+}
 
 
 
