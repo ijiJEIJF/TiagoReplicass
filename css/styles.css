@@ -752,6 +752,13 @@ footer {
 .shop-button:hover {
     background-color: #e76f51;
 }
+/* Stile per il testo in grassetto e grande */
+.large-text {
+    font-size: 50px; /* Aumenta la dimensione del testo */
+    color: #f3efef; /* Puoi modificare anche il colore se necessario */
+}
+
+
 
 
 
